@@ -1,0 +1,9 @@
+- hosts: target1
+  tasks:
+  - name: Create a file
+    ansible.builin.file:
+      path: "/home/hr243/file1.txt"
+      state: touch
+    register: output
+  - debug:
+      var: output
